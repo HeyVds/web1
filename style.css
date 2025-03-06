@@ -9,15 +9,19 @@
   --cor-fundo-footer: #000000;
   --cor-sombra: #1e1e1e4d;
   --fonte-principal: "Montserrat", sans-serif;
-  --tamanho-texto-principal: 16px;
-  --tamanho-texto-sec: 14px;
-  --tamanho-texto-ter: 12px;
-  --tamanho-texto-qua: 10px;
+  --tamanho-texto-principal: 20px;
+  --tamanho-texto-sec: 18px;
+  --tamanho-texto-ter: 16px;
+  --tamanho-texto-qua: 14px;
 }
 /* ------------- Geral ---------------*/
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
   font-family: var(--fonte-principal);
   font-size: var(--tamanho-texto-principal);
   background-color: var(--cor-fundo);
@@ -26,11 +30,36 @@ body {
 header {
   background-color: var(--cor-texto-secundaria);
   padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+header nav ul li {
+  list-style: none;
 }
 
 header nav ul li a {
   text-decoration: none;
   color: var(--cor-texto-primaria);
+}
+
+header nav ul li a:hover {
+  border-bottom: 2px solid var(--cor-texto-primaria);
 }
 
 header a img {
@@ -43,6 +72,13 @@ main {
 
 footer {
   background-color: var(--cor-fundo-footer);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 2rem;
 }
 
 footer p {
@@ -54,6 +90,10 @@ footer a {
   color: var(--cor-texto-primaria);
 }
 
+footer a:hover {
+  border-bottom: 2px solid var(--cor-texto-primaria);
+}
+
 /*-------------------- Index -------------------*/
 .home-index {
   background-image: url(imagens/Background.png);
@@ -61,30 +101,386 @@ footer a {
   background-size: cover;
   background-position: center;
   min-height: 100vh;
-  height: auto;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  gap: 1rem;
+  text-align: center;
 }
 
 .index-title {
-  font-size: var(--tamanho-texto-principal);
+  font-size: 2rem;
   line-height: 1.5;
   color: var(--cor-texto-primaria);
 }
 
 .index-sub-title {
-  font-size: var(--tamanho-texto-sec);
+  font-size: var(--tamanho-texto-principal);
   line-height: 1.5;
   color: var(--cor-texto-primaria);
 }
 
 .index-text {
-  font-size: var(--tamanho-texto-ter);
+  font-size: var(--tamanho-texto-sec);
   line-height: 1.5;
   color: var(--cor-texto-primaria);
 }
 
+.home-index form input {
+  background-color: rgba(255, 255, 255, 0.274);
+  border-radius: 2rem;
+  border: 1px solid var(--cor-primaria);
+  color: var(--cor-texto-primaria);
+  padding: 0.5rem 1rem;
+  font-size: var(--tamanho-texto-sec);
+}
+
+.home-index form button {
+  background-color: red;
+  color: var(--cor-texto-primaria);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: var(--tamanho-texto-sec);
+}
+
 /*----------------------- Sobre o autor -----------------*/
+.about-author {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .about-author-container {
-  min-height: 70vh;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: var(--cor-sombra);
+  padding: 2rem;
+  gap: 1rem;
+  border-radius: 1rem;
+}
+
+.about-author-container h1 {
+  font-size: var(--tamanho-texto-principal);
+  color: var(--cor-texto-secundaria);
+}
+
+.about-author-container p {
+  font-size: var(--tamanho-texto-sec);
+  color: var(--cor-texto-secundaria);
 }
 
 /*--------------------- Detalhes ---------------------------- */
+
+.detalhes {
+  min-height: 100vh;
+  width: 100%;
+  padding: 1rem 0;
+  background-image: url(imagens/Background2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.detalhes-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+.detalhes-container {
+  background: var(--cor-sombra);
+  padding: 1rem;
+  gap: 2rem;
+}
+
+.detalhes-container h2 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.destaques {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  position: relative;
+  width: 100%;
+}
+
+.destaques div a {
+  text-decoration: none;
+  color: var(--cor-texto-primaria);
+}
+
+.destaques button {
+  background: rgba(255, 255, 255, 0.3);
+  border: 3px solid rgba(255, 255, 255, 0.527);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.destaques button:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.destaques div {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.destaques img {
+  width: 150px;
+  height: 100px;
+  border-radius: 10px;
+}
+
+.destaques h3 {
+  color: var(--cor-primaria);
+  padding-top: 0.5rem;
+}
+
+/*---------------- Login --------------------*/
+.login {
+  min-height: 100vh;
+  background-image: url(imagens/Background3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+}
+
+.login-form {
+  display: flex;
+  height: 30vh;
+  width: 30%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.521);
+  padding: 2rem;
+  gap: 0.5rem;
+}
+
+.login-form label {
+  font-size: var(--tamanho-texto-principal);
+  color: var(--cor-texto-secundaria);
+}
+
+.login-form button {
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  font-size: var(--tamanho-texto-sec);
+}
+
+.login-form input {
+  padding: 0.5rem 0.5rem;
+  border-radius: 2rem;
+}
+
+/*----------------- Cadastro Usuários ---------------------*/
+.cadastro {
+  min-height: 100vh;
+  background-image: url(imagens/Background3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+}
+
+.form-cadastro {
+  display: flex;
+  height: 50vh;
+  width: 30%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.521);
+  padding: 2rem;
+  gap: 0.5rem;
+}
+
+.form-cadastro label {
+  font-size: var(--tamanho-texto-principal);
+  color: var(--cor-texto-secundaria);
+}
+
+.form-cadastro button {
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  font-size: var(--tamanho-texto-sec);
+  background-color: red;
+}
+
+.form-cadastro input {
+  padding: 0.5rem 0.5rem;
+  border-radius: 2rem;
+}
+
+/*------------------------ Cadastro filme --------------------*/
+.login {
+  min-height: 100vh;
+  background-image: url(imagens/Background3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+}
+
+.login-form {
+  display: flex;
+  height: 30vh;
+  width: 30%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.521);
+  padding: 2rem;
+  gap: 0.5rem;
+}
+
+.login-form label {
+  font-size: var(--tamanho-texto-principal);
+  color: var(--cor-texto-secundaria);
+}
+
+.login-form button {
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  font-size: var(--tamanho-texto-sec);
+}
+
+.login-form input {
+  padding: 0.5rem 0.5rem;
+  border-radius: 2rem;
+}
+
+/*----------------- Cadastro Usuários ---------------------*/
+.cadastro-filme {
+  min-height: 100vh;
+  background-image: url(imagens/Background3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.cadastro-filme-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+.cadastro-filme-form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.521);
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.cadastro-filme-form label {
+  font-size: var(--tamanho-texto-principal);
+  color: var(--cor-texto-secundaria);
+}
+
+.cadastro-filme-form button {
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  font-size: var(--tamanho-texto-sec);
+  color: var(--cor-primaria);
+  background-color: red;
+  border: none;
+}
+
+.cadastro-filme-form input {
+  padding: 0.5rem 0.5rem;
+  border-radius: 2rem;
+}
+
+.filmes-cadastrados {
+  width: 80%;
+  margin-top: 2rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.filmes-cadastrados h2 {
+  font-size: var(--tamanho-texto-principal);
+  color: var(--cor-texto-secundaria);
+  margin-bottom: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: var(--cor-texto-secundaria);
+  color: white;
+}
+
+th,
+td {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+button {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: var(--tamanho-texto-sec);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:nth-child(1) {
+  background-color: #f0ad4e;
+  color: white;
+}
+
+button:nth-child(2) {
+  background-color: red;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.8;
+}

@@ -1,79 +1,84 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastro Filmes</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <a href="./index.html">
-      <img src="imagens/Logo.png" alt="logo" />
-    </a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro Filmes</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="./index.html">
+        <img src="imagens/Logo.png" alt="logo" />
+      </a>
 
-    <nav>
-      <ul>
-        <li><a href="./cadastroUsuario.html">Cadastro Usuários</a></li>
-        <li><a href="./cadastroFilmes.html">Cadastro Filmes</a></li>
-        <li><a href="./login.html">Login</a></li>
-      </ul>
-    </nav>
-  </header>
-  
-  <main>
-    <section>
-      <div>
-        <form>
-          <labe>Cadastrar Filme</label>
+      <nav>
+        <ul>
+          <li><a href="./cadastroUsuario.html">Cadastro Usuários</a></li>
+          <li><a href="./cadastroFilmes.html">Cadastro Filmes</a></li>
+          <li><a href="./login.html">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="cadastro-filme">
+        <div class="cadastro-filme-container">
+          <form class="cadastro-filme-form">
+            <label>Cadastrar Filme</label>
             <label for="titulo">Titulo do filme</label>
-          <input type="text" name="titulo" id="titulo">
-          <br>
-          <label for="arquivo">Arquivo</label>
-          <input type="file" name="arquivo" id="arquivo">
-        </form>
-      </div>
-      
-      <div>
-        <h2>Filmes cadastrados</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Título</th>
-              <th>Gênero</th>
-              <th>Editar</th>
-              <th>Excluir</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>opção 1</td>
-              <td>opção 1</td>
-              <td><button>Editar</button></td>
-              <td><button>Excluir</button></td>
-            </tr>
-            <tr>
-              <td>opção 2</td>
-              <td>opção 2</td>
-              <td><button>Editar</button></td>
-              <td><button>Excluir</button></td>
-            </tr>
-            <tr>
-              <td>opção 3</td>
-              <td>opção 3</td>
-              <td><button>Editar</button></td>
-              <td><button>Excluir</button></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-    
+            <input type="text" name="titulo" id="titulo" placeholder="Titulo" />
+            <label for="genero">Gênero</label>
+            <input type="text" name="genero" id="genero" placeholder="Gênero" />
+            <label for="data">Data de lançamento</label>
+            <input type="date" name="data" id="data" />
+            <label for="arquivo">Arquivo</label>
+            <input type="file" name="arquivo" id="arquivo" />
+            <label for="descricao">Sinopse</label>
+            <textarea name="descricao" id="descricao"></textarea>
+            <button>Cadastrar</button>
+          </form>
+        </div>
 
-    <footer>
-      <p>Todos os direitos reservados ©</p>
-      <a href="./sobre-autor.html">Sobre o autor.</a>
-    </footer>
-  </main>
-</body>
+        <div class="filmes-cadastrados">
+          <h2>Filmes cadastrados</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Título</th>
+                <th>Gênero</th>
+                <th>Editar</th>
+                <th>Excluir</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>opção 1</td>
+                <td>opção 1</td>
+                <td><button>Editar</button></td>
+                <td><button>Excluir</button></td>
+              </tr>
+              <tr>
+                <td>opção 2</td>
+                <td>opção 2</td>
+                <td><button>Editar</button></td>
+                <td><button>Excluir</button></td>
+              </tr>
+              <tr>
+                <td>opção 3</td>
+                <td>opção 3</td>
+                <td><button>Editar</button></td>
+                <td><button>Excluir</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <footer>
+        <p>Todos os direitos reservados ©</p>
+        <a href="./sobre-autor.html">Sobre o autor.</a>
+      </footer>
+    </main>
+  </body>
 </html>

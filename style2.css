@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+
+:root {
+  --cor-primaria: #ebebeb;
+  --cor-secundaria: #8ee09a;
+  --cor-texto-primaria: #ffffff;
+  --cor-texto-secundaria: #000000;
+  --cor-fundo: #9e9e9e;
+  --cor-fundo-footer: #000000;
+  --cor-sombra: #1e1e1e4d;
+  --fonte-principal: "Montserrat", sans-serif;
+  --tamanho-texto-principal: 16px;
+  --tamanho-texto-sec: 14px;
+  --tamanho-texto-ter: 12px;
+  --tamanho-texto-qua: 10px;
+}
+/* ------------- Geral ---------------*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--fonte-principal);
+  font-size: var(--tamanho-texto-principal);
+  background-color: var(--cor-fundo);
+}
+
+header {
+  /* background-color: var(--cor-texto-secundaria); */
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.navegador {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.navegador ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navegador ul li {
+  list-style: none;
+}
+
+.navegador ul li a {
+  text-decoration: none;
+  color: var(--cor-texto-primaria);
+}
+
+header a img {
+  height: 2rem;
+}
+
+main {
+  background-color: var(--cor-fundo);
+}
+
+footer {
+  background-color: var(--cor-fundo-footer);
+}
+
+footer p {
+  color: var(--cor-texto-primaria);
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--cor-texto-primaria);
+}
+
+.home-index {
+  background-image: url(imagens/Background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  height: auto;
+}
+
+.index-title {
+  font-size: var(--tamanho-texto-principal);
+  line-height: 1.5;
+  color: var(--cor-texto-primaria);
+}
+
+.index-sub-title {
+  font-size: var(--tamanho-texto-sec);
+  line-height: 1.5;
+  color: var(--cor-texto-primaria);
+}
+
+.index-text {
+  font-size: var(--tamanho-texto-ter);
+  line-height: 1.5;
+  color: var(--cor-texto-primaria);
+}
